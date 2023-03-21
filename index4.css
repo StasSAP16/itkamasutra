@@ -1,0 +1,18 @@
+/* img и .important-item -это селектор */
+img {
+    width: 50px;
+    padding: 20px;
+}
+
+.important-item {
+    color: blue;
+    font-size: 20px;
+    border: rgb(0, 255, 76) 1px solid;
+    margin-left: 10px;
+    padding-left: 20px;
+
+}
+
+.important-size {
+    font-size: 40px;
+}
