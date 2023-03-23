@@ -1,26 +1,53 @@
-<input value="Hello sap RE-FX" class="hello-mes" id="hello-mes" />
+<input value="Stas" class="first-input nextClass" id="first-name" />
+<input value="Amirov" class="lastName-input nextClass1" id="last-name" />
+<input value="Budva" class="address-input nextClass2" id="address" />
 
-<h1>Develop-t</h1>
-<ul>
-    <li>html</li>
-    <li>css</li>
-    <li>scss</li>
-    <li>TypeScript</li>
-    <li>JS</li>
-    <li>DOM</li>
-    <li>React</li>
-</ul>
+<!-- тег select дает поле выбора в сочетании с option выбор с выпадающим списком -->
+<!-- selected="selected" - элемент будет 1й в списке -->
+<!-- атрибута value у selected нет! но он есть в JS  -->
+<select id="cities">
+    <option >Budva</option>
+    <option selected="selected">Minsk</option> 
+    <option >Tivat</option>
+</select>
+
+<textarea id="hobbies">JS,CSS</textarea>
+
 <script>
-    let helloMesElement;
-    let helloMesId;
+    let firstNameId;
+    let firstNameEl;
+    let LastNameId;
+    let LastNameEl;
+    let addressId;
+    let addressEl;
+    let citiesId;
+    let citiesEl;
+    let hobbiesId;
+    let hobbiesEl;
 
-    helloMesId = 'hello-mes';
-    helloMesElement = document.getElementById(helloMesId);
-    window.alert(helloMesElement.value);
-    // window.alert(helloMesElement.id);
-    // window.alert(helloMesElement.className);
 
-    // в реальности пишется вот так
-    // let helloMesElement;
-    // helloMesElement = document.getElementById('hello-mes');
+
+    firstNameId = 'first-name';
+    LastNameId = 'last-name';
+    addressId = 'address';
+    citiesId = 'cities'
+    hobbiesId = 'hobbies';
+
+    firstNameEl = document.getElementById(firstNameId);
+    LastNameEl = document.getElementById(LastNameId);
+    addressEl = document.getElementById(addressId);
+    citiesEl = document.getElementById(citiesId);
+    hobbiesEl = document.getElementById(hobbiesId);
+
+
+    window.alert(firstNameEl.value);
+    window.alert(firstNameEl.className);
+    window.alert(LastNameEl.value);
+    window.alert(addressEl.value);
+    // если алетнуть citiesEl то в результате выведется значение с присвоенным selected="selected", т.к. у select нет атрибута value
+    // а у JS он есть и равен присвоенному selected="selected"
+    window.alert(citiesEl.value);
+    // с тегом textarea такая же ситуаци у него нет value, но фактические value является введенный текст внутри тега (inner HTML)
+    window.alert(hobbiesEl.value);
+
 </script>
