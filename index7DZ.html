@@ -6,12 +6,17 @@
 <!-- selected="selected" - элемент будет 1й в списке -->
 <!-- атрибута value у selected нет! но он есть в JS  -->
 <select id="cities">
-    <option >Budva</option>
-    <option selected="selected">Minsk</option> 
-    <option >Tivat</option>
+    <option>Budva</option>
+    <option selected="selected">Minsk</option>
+    <option>Tivat</option>
 </select>
 
 <textarea id="hobbies">JS,CSS</textarea>
+
+<!-- атрибут alt это то значение которое будет выводиться пока картинка не загрузится -->
+<div id="ava">
+    <img id="avatar" src="/Users/stanislav/desktop/itkamasutra/swift.png" alt="Аватар" />
+</div>
 
 <script>
     let firstNameId;
@@ -24,8 +29,13 @@
     let citiesEl;
     let hobbiesId;
     let hobbiesEl;
-
-
+    // можно короче писать создавать переменную и сразу ее инициализировать (присвоить Id)
+    // НО ВАЖНО сначала объявить переменную Id и только потом ее использовать!
+    let avatarContainerId = 'ava';
+    // то же касается и  другой переменной (итого 2 строчки вместо 4х)
+    let avatarContainerEl = document.getElementById(avatarContainerId);
+    let avatarId = 'avatar';
+    let avatarEl = document.getElementById(avatarId);
 
     firstNameId = 'first-name';
     LastNameId = 'last-name';
@@ -49,5 +59,17 @@
     window.alert(citiesEl.value);
     // с тегом textarea такая же ситуаци у него нет value, но фактические value является введенный текст внутри тега (inner HTML)
     window.alert(hobbiesEl.value);
+    // значение алетрнутого value div = undefined, т.к. value есть у элементов управления которые являются элементами ввода
+    // а именно: input, select, textarea и получается что у div нет вообще value, даже у JS - у "души"
+    window.alert(avatarContainerEl.value);
+    //  алерт иннер html элемента div - результат путь к картинке
+    window.alert(avatarContainerEl.innerHTML);
+    //  алерт иннер html элемента textarea - результат такойже как при алерта value!
+    window.alert(hobbiesEl.innerHTML);
+    //  алерт иннер html элемента select - 
+    window.alert(citiesEl.innerHTML);
+    // алертнулось значение src адрес место расположения картинки
+    window.alert(avatarEl.src);
+    window.alert(avatarEl.alt);
 
 </script>
