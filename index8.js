@@ -16,6 +16,15 @@ let firstNameId;
     let avatarId = 'avatar';
     let avatarEl = document.getElementById(avatarId);
 
+    function alertValue() {
+        window.alert(listEl.innerHTML);
+    }
+
+    function logValue() {
+        console.log(listEl.innerHTML);
+        console.log(firstNameEl.value);
+    }
+
     firstNameId = 'first-name';
     LastNameId = 'last-name';
     addressId = 'address';
@@ -49,4 +58,8 @@ let firstNameId;
     let listEl = document.getElementById(listId);
     // можно написать короче 
     // let list = document.getElementById('list');
-    window.alert(listEl.innerHTML);
+    // window.alert(listEl.innerHTML);
+
+    alertValue();
+    logValue();
+
