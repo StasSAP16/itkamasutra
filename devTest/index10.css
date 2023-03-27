@@ -1,0 +1,10 @@
+.first-input{
+    border: blue 5px solid;
+    background-color: cyan;
+    padding: 5px;
+}
+.errorInput{
+    border-color: red;
+    background-color: coral;
+}
+
