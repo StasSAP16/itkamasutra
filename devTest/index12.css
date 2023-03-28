@@ -1,0 +1,35 @@
+.calc{
+    width: 500px;
+    /* выравниваем по центру */
+    margin: 0 auto; 
+    /* все что внутри выравниваем по центру */
+    text-align: center;
+    /* устанавливаем цвет фона */
+    background-color: rgb(80, 235, 255);
+    /* добавляем внутренние отступы  */
+    padding: 10px;
+    /* внешние границы всего контейнера  */
+    border: 1px solid black;
+}
+/* правила реливантны только для тех баттонов, которые внутри operationsBlock */
+/* и внутри всего контейнера calc */
+.calc .operationsBlock button {
+    /* ширина */
+    width: 40px;
+    /* высота */
+    height: 40px;
+    /* отступы */
+    margin: 10px;
+}
+
+/* расставляем в инлайновом порядке (один за одним) элементы inputsBlock */
+.calc .inputsBlock .inputBlock {
+    display: inline-block;
+    /* добавим отступы  */
+    padding: 10px;
+}
+/* делаем label блочным элементом (сам по себе он инлайновый),  */
+/* что бы он располагался над инпутом */
+.calc .inputsBlock .inputBlock label {
+    display: block;
+}
