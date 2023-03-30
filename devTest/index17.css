@@ -1,0 +1,83 @@
+/* <---от что есть общее у страниц всего сайта должно идти сверху!!!---> */
+/* так же файла css будет 2, 1 - общий для всех страниц (футер подвал) и 2й особенности к странице */
+/* епренесли .footer в файл index17layout.css */
+/* .footer {
+    background-color: rgb(255, 0, 149);
+    font-size: medium;
+} */
+/* так глобально для всех li лучше не писать  и др глобальных селекторов тоже!
+li {
+    /* padding - отступы друг от друга  */
+    /* padding: 10px; */
+/*} */
+/* .section-hot li,
+.section-realti li {
+    /* padding - отступы друг от друга  */
+    /* padding: 10px; */
+/*} */
+/* еще раз перепишем после добавлегия в 2 главних div класса section-news */
+.news-content .section-news li {
+    /* padding - отступы друг от друга  */
+    padding: 10px;
+}
+/* переделаем правило, что если навели (под hover - ом сееция li то ссылка становится белой */
+/* ранее было так a:hover - когда наводим на ссылку она становится белой */
+.news-content .section-news li:hover a {
+    /* цвет ссылки белый при наведении */
+    color: white;
+    /* можно задний фон поменять при наведении на ссылку */
+    background-color: red;
+}
+.news-content .section-news h2 {
+    /* color - устанавливаем цвет шрифта белый  утекста h2*/
+    color: white;
+    /* padding - отступы друг от друга  */
+    padding: 10px;
+}
+/* если вложенность к тегу применяем то НЕ ставим . и пишем тег h2*/
+.news-content .section-hot h2 {
+    /* фон заголовков h2 */
+    background-color: olive;
+}
+.news-content .section-realti h2{
+    /* фон заголовков h2 */
+    background-color: gold;
+    /* верхний паддинг/отступ
+    padding-top: 20px;
+     /* нижний паддинг/отступ */
+    /* padding-bottom: 20px; */ 
+}
+/* сделаем подсветку элементу по наведению на него  */
+/* .hotItem:hover {
+    background-color: olive;
+} */
+/* делаем вложенность все li элемента с классом section-hot  */
+.news-content .section-hot li:hover {
+    background-color: olive;
+}
+/* .realtiItem:hover {
+    background-color: gold;
+} */
+.news-content .section-realti li:hover {
+    background-color: gold;
+}
+/* .hotFuter {
+    color: red;
+}
+.realtiFuter {
+    color: green;
+} */
+/* стилизуем 2 футера обеих секций вложенность!!! футер -> секции section-realti / section-hot  */
+/* если вложенность к классу применяем то ставим . и пишем класс */
+.news-content .section-hot .footer {
+    color: red;
+    /* background-color: white; */
+}
+.news-content .section-realti .footer {
+    color: green;
+    /* background-color: white; */
+}
+/* перенесем background-color: white; в отдельный селектор */
+.news-content .section-news .footer {
+    background-color: white;
+}
